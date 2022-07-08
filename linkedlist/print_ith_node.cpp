@@ -1,3 +1,8 @@
+#include<iostream>
+#include<llds.h>
+
+using namespace std;
+
 int getIthNode(Node* head, int i)
 {
     Node* current = head;  
@@ -23,4 +28,32 @@ void printIthNode(Node *head, int i)
     {
         cout << val << endl;
     }
+}
+
+Node *takeinput()
+{
+    LinkedList ll = new LinkedList();
+	int data;
+	cin >> data;
+	while (data != INT_MIN)
+	{
+		cin >> data;
+        ll.push(data);
+	}
+	return ll.head;
+}
+
+int main()
+{
+	int t;
+	cin >> t;
+	while (t--)
+	{
+		Node *head = takeinput();
+		int pos;
+		cin >> pos;
+		printIthNode(head, pos);
+		cout << endl;
+	}
+	return 0;
 }
