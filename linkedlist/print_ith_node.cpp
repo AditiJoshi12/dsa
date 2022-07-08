@@ -22,7 +22,6 @@ int getIthNode(Node* head, int i)
 
 void printIthNode(Node *head, int i)
 {
-    //Write your code here
     int val = getIthNode(head, i);
     if (val != -1)
     {
